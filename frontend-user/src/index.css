@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2.5 font-medium transition-all rounded-md shadow-sm text-base;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-primary-600 hover:bg-primary-700 min-w-[100px] h-[40px];
+  }
+  
+  .btn-secondary {
+    @apply text-white bg-secondary-600 hover:bg-secondary-700;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-100;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply overflow-hidden bg-white rounded-lg shadow-soft;
+  }
+  
+  .shadow-soft {
+    @apply shadow-md;
+  }
+  
+  .section {
+    @apply py-16;
+  }
+  
+  .section-title {
+    @apply mb-12 text-3xl font-bold text-center md:text-4xl;
+  }
+  
+  .subtitle {
+    @apply text-sm font-medium tracking-wider text-primary-600 uppercase;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
