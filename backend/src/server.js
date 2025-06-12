@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 // Cấu hình CORS chi tiết
 const corsOptions = {
   // Cho phép các origin từ môi trường development và production
-  origin: function(origin, callback) {
+  origin: function (origin, callback) {
     // Các domains được phép
     const allowedOrigins = [
       'http://localhost:3000',      // Frontend user - local
@@ -64,7 +64,7 @@ const corsOptions = {
       'https://gotour.yourdomain.com', // Thay bằng domain thực tế
       // Thêm các domain khác nếu cần
     ];
-    
+
     // Cho phép requests không có origin (như mobile apps hoặc Postman)
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
@@ -90,8 +90,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Test endpoint đơn giản - để kiểm tra kết nối
 app.get('/api/test', (req, res) => {
-  res.status(200).json({ 
-    success: true, 
+  res.status(200).json({
+    success: true,
     message: 'API kết nối thành công',
     time: new Date().toISOString()
   });
@@ -127,3 +127,5 @@ process.on('unhandledRejection', (err, promise) => {
   // Đóng server và thoát
   server.close(() => process.exit(1));
 });
+
+//vvdung
