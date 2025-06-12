@@ -15,7 +15,7 @@ module.exports = {
     BANK_NAME: process.env.SEPAY_BANK_NAME || 'Ngân hàng TMCP MBBank',
     ACCOUNT_NAME: process.env.SEPAY_ACCOUNT_NAME || 'CÔNG TY TNHH DU LỊCH DAWIN'
   },
-  
+
   // Thông tin cấu hình thanh toán
   PAYMENT: {
     CURRENCY: 'VND',
@@ -24,4 +24,6 @@ module.exports = {
     ],
     TRANSFER_PREFIX: process.env.TRANSFER_PREFIX || 'GT'
   }
-}; 
+};
+
+//first comment hehe
